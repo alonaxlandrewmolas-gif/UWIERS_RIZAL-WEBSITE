@@ -13,18 +13,18 @@ body {
 }
  
 /* Header: picture on top, name below, both centered */
-16  header {
-17    padding: 20px 15px 10px;
-18  }
-19
-20  header img {
-21    width: 300px;
-22    height: auto;
-23    display: block;
-24    margin: 0 auto;
-25  }
-26
-27  h1 {
+  header {
+    padding: 20px 15px 10px;
+  }
+
+  header img {
+   width: 300px;
+   height: auto;
+   display: block;
+   margin: 0 auto;
+  }
+
+  h1 {
 nav {
   display: flex;
   justify-content: center;
