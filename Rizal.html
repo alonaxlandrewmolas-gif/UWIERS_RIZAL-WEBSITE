@@ -1,0 +1,440 @@
+* {
+  box-sizing: border-box;
+}
+ 
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Times New Roman", serif;
+  color: #000;
+  text-align: center;
+  background: linear-gradient(160deg, #f5c000 0%, #c8711a 50%, #a82a26 100%);
+  background-attachment: fixed;
+}
+ 
+/* Header: picture on top, name below, both centered */
+header {
+  padding: 20px 15px 10px;
+}
+ 
+ 
+h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  text-align: center;
+}
+ 
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: center;
+  margin: 15px auto;
+}
+ 
+nav a {
+  padding: 12px 30px;
+  margin-left: -2px; /* keeps the borders joined like a table */
+  border: 2px solid #000;
+  background: rgba(266, 266, 266, 0.6);
+  color: #3b0a6e;
+  text-decoration: style;
+  font-weight: bold;
+  transition: border-radius 0.2s, padding 0.2s, background 0.2s;
+}
+ 
+nav a:first-child {
+  margin-left: 0;
+}
+ 
+/* Oblong (pill) shape when tapped / hovered */
+nav a:hover,
+nav a:active,
+nav a:focus {
+  border-radius: 50px;
+  padding: 12px 40px;
+  background: rgba(255, 255, 255, 0.95);
+  position: relative; /* shows the full rounded border above neighbors */
+}
+
+/* ABOUT SECTION */
+.about {
+  display: none;
+  width: min(700px, 90%);
+  margin: 15px auto;
+  padding: 15px 20px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 10px;
+  border: 2px solid #000;
+  text-align: left;
+  float: none;
+  clear: both;
+}
+
+.about:target {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+ 
+
+
+
+.about h2 {
+  text-align: center;
+  margin-top: 0;
+}
+footer {
+  align-content : center;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+
+.about li {
+    list-style-position: inside;  /* bullet moves inside, right next to the text */
+}
+
+.content {
+            width: min(850px, 90%);
+            margin: 20px auto;
+            box-sizing: border-box;
+        }
+ 
+        /* One box per topic */
+        .content section {
+            background: #fdf3e3;
+            border: 2px solid #000;
+            border-radius: 12px;
+            padding: 20px 25px;
+            margin: 20px 0;
+            box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            box-sizing: border-box;
+        }
+ 
+        .content h1,
+        .content h2 {
+            margin: 0 0 12px;
+        }
+ 
+        /* Centered, readable paragraphs */
+        .content p {
+            max-width: 700px;
+            margin: 10px auto;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            text-align: center;
+        }
+ 
+        /* Bulleted list: centered as a block, bullets stuck to the text */
+        .content ul {
+            display: table;
+            margin: 10px auto;
+            padding: 0;
+            max-width: 700px;
+            text-align: center;
+        }
+ 
+        .content li {
+            margin: 10px 0;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            list-style-position: inside;
+        }
+
+
+       { text-decoration: style;       /* changes to: none; */
+background: rgba(266, 266, 266, 0.6); } /* change to: rgba(255, 255, 255, 0.6); */
+
+/* SMOOTH SCROLL*/
+html {scroll-behavior: smooth;}
+
+
+/* CHARACTERS: same behavior as ABOUT */
+.char {
+  display: none;
+}
+
+.char:target {
+  display: block;
+}
+
+/*BACKGROUND OF NOVELS HTML PIC*/
+
+.profile-pic {
+  width: 7in;      /* change this */
+  height: 7in;     /* and this */
+  object-fit: cover;
+  margin: 0 auto 12px;
+  
+}
+
+.content {
+            width: min(850px, 90%);
+            margin: 20px auto;
+            box-sizing: border-box;
+        }
+ 
+        /* One box per topic */
+        .content section {
+            background: #fdf3e3;
+            border: 2px solid #000;
+            border-radius: 12px;
+            padding: 20px 25px;
+            margin: 20px 0;
+            box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            box-sizing: border-box;
+        }
+ 
+
+.reflection-char {
+  width: 100%;
+  background: #fdf3e3;
+  border: 2px solid #000;
+  border-radius: 12px;
+  padding: 20px 25px;
+  margin: 20px 0;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+.reflection-char {
+  max-width: 700px;
+  margin: 10px auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.reflection-char .impact-p {
+  max-width: 600px;
+  margin: 0 auto 20px;      /* centers the block, space between paragraphs */
+  padding: 0 40px;          /* indents the whole paragraph from both sides */
+  text-align: center;
+  text-align: justify;          /* centers the text */
+  text-indent: 2em;         /* indents the first line of each paragraph */
+  font-size: 1.9rem;
+  line-height: 1.6;
+}
+
+
+
+/* Remove the gap between IMPACT and the underscore line */
+.reflection-char .impact-title {
+  margin-bottom: 0;
+}
+
+.reflection-char .impact-line {
+  line-height: 1;       /* shrinks the tall line box around the underscores */
+  margin-top: -12px;
+  font-size: 1.6rem;     /* pulls the line closer; adjust or remove */
+}
+
+    /* Center the REFLECTION text */
+.reflection-char .reflection-p {
+  text-align: center;
+  text-indent: 0;
+  line-height: 1.6;
+}
+
+/* Bullet right next to the name */
+.reflection-char ul {
+  display: table;           /* shrinks the list to fit the text */
+  margin: 10px auto;        /* keeps it centered */
+  padding: 0;
+}
+
+.reflection-char li {
+  list-style-position: inside;   /* dot sits beside the name */
+}
+
+/* Reflection text: same size as IMPACT */
+.reflection-char ul h2 {
+  font-size: 1.9rem;     /* matches .impact-p */
+  line-height: 1.6;
+  margin: 0 0 20px;
+}
+
+/* NOLI and EL FILI: paragraphs left-aligned and justified */
+#noli p,
+#elfili p {
+  text-align: justify;
+  text-align-last: left;  /* last line of each paragraph stays on the left */
+
+}
+#important-facts li{
+text-align: center;
+text-align-last: left;
+}
+
+/* All sections: left-aligned and justified text */
+.content section p,
+.content section li,
+.content section h3 {
+  text-align: justify;
+  text-align-last: left;  /* last line of each paragraph stays on the left */
+}
+
+.about .famous-works h1,h2 {
+  font-style: normal;
+}
+#important-facts li{
+text-align: justify;
+text-align-last: left;}
+
+.content i{
+  font-style: normal;
+}
+#important-facts li{
+text-align: justify;
+text-align: center;}
+
+.table-1{size: 90px; }
+.about p{
+  text-align: justify;
+  text-indent: 2em;
+}
+
+/* Birth and Death table: centered table and centered text */
+#border-1 {
+  margin: 20px auto;      /* centers the table itself */
+  border-collapse: collapse;
+}
+
+#border-1 th,
+#border-1 td {
+  text-align: center;     /* centers the text inside each cell */
+  padding: 10px 30px;
+}
+ 
+/* REFLECTION paragraphs: justified, every paragraph indented */
+.reflection-char ul p 
+.reflection-char ul h2{
+  max-width: 100%;
+  margin: 0 0 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  text-align: justify;
+  text-align-last: left;
+  text-indent: 2em;       /* indents the first line of EVERY paragraph */
+}
+
+/* MI ULTIMO ADIOS: centered block, justified, first line indented */
+#mi-ultimo-adios p{
+  max-width: 700px;
+  margin: 10px auto;
+  text-align: justify;
+  text-align-last: left;
+  text-indent: 2em;
+}
+.impact-reflection h2{
+  text-indent: 2em;
+} 
+
+
+#important-facts li{
+text-align: justify;
+}
+
+/* REFLECTION: justified text, centered block */
+.reflection-char ul {
+  display: block;          /* stops the list from shrinking and centering the text */
+  width: 100%;
+  max-width: 650px;
+  margin: 10px auto;
+  padding: 0;
+}
+
+
+
+.reflection-char ul h2,
+.reflection-char ul h2
+.impact-reflection h2{
+  font-size: 1.5rem;       /* same size as the NOLI text */
+  font-weight: normal;     /* remove this line if you want it bold */
+  line-height: 1.6;
+  text-align: justify;
+  text-align-last: left;   /* last line stays on the left */
+  text-indent: 2em;        /* first line of each paragraph is indented */
+  margin: 0 0 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  
+}
+
+/* IMPACT and REFLECTION boxes: same width as the CHARACTERS boxes */
+.content section.reflection-char {
+  width: 100%;
+  max-width: none;       /* removes the 700px limit */
+  margin: 20px 0;        /* same spacing as the CHARACTERS boxes */
+  padding: 20px 25px;
+}
+
+.reflection-char .impact-p {
+  max-width: 600px;
+}
+/* IMPACT paragraph: normal text */
+.reflection-char .impact-p,
+.reflection-char .impact-p h2 {
+  font-size: 2inch;  /* same size as the other paragraphs */
+  font-weight: normal;     /* removes the bold */
+  max-width: 100%;         /* fills the wider box */
+  padding: 0;
+  text-align: justify;
+  text-align-last: left;
+}
+
+/* IMPACT paragraphs: normal text, justified, every paragraph indented */
+.impact-text p {
+  max-width: 100%;
+  margin: 0 0 15px;
+  font-size: 2inch;
+  text-align: elft;
+  font-weight: normal;
+  line-height: 1.6;
+  text-align: justify;
+  text-align-last: left;
+  text-indent: 2em;        /* indents the first line of EVERY paragraph */
+}
+
+/* Names stay centered above the text */
+.reflection-char ul h1,
+.reflection-char ul li {
+  text-align: center;
+  text-align-last: center;
+  
+}
+
+
+            /*2x2 PICS SA REFLECTION*/
+.reflection-char .axl-2x2 {
+  width: 2in;
+  height: 2in;
+  object-fit: cover;   /* fills the 2x2 box without stretching the photo */
+  display: block;
+  margin: 0 auto 10px; /* centers it above the name */
+}
+
+.reflection-char .Aryan-2x2 {
+  width: 2in;
+  height: 2in;
+  object-fit: cover;   /* fills the 2x2 box without stretching the photo */
+  display: block;
+  margin: 0 auto 10px; /* centers it above the name */
+}
+
+.reflection-char .jepjep-2x2{
+  width: 2in;
+  height: 2in;
+  object-fit: cover;
+  display:block;
+  margin: 0 auto 10px;
+}
+
+.reflection-char .Althea-2x2{
+  width: 2in;
+  height: 2in;
+  object-fit: cover;
+  display:block;
+  margin: 0 auto 10px;
+}
